@@ -30,7 +30,7 @@ $router->get('/mensaje', [LoginController::class, 'mensaje']);
 
 //Zona privada 
 $router->get('/admin', [AdminController::class, 'index']);
-$router->get('/cancha', [AdminController::class, 'cancha']);
+$router->get('/cancha-admin', [AdminController::class, 'cancha']);
 $router->get('/cuenta', [AdminController::class, 'cuenta']);
 $router->get('/perfil', [AdminController::class, 'perfil']);
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador

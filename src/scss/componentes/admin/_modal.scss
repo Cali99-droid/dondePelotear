@@ -14,7 +14,7 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
   .formulario {
-    max-width: 40rem;
+    max-width: 80rem;
     background-color: v.$blanco;
     padding: 2rem;
     margin: 0 auto;
@@ -43,6 +43,12 @@
     .opciones {
       display: flex;
       justify-content: space-between;
+    }
+
+    select {
+      height: 4.14rem;
+      border: 1px solid v.$gris;
+      border-radius: 0.5rem;
     }
     .submit-nueva-tarea {
       @include m.boton(v.$verde, v.$blanco);
@@ -98,5 +104,12 @@
   to {
     top: 0;
     opacity: 1;
+  }
+}
+
+.contenedor-form {
+  display: flex;
+  gap: 2rem;
+  .columna {
   }
 }
