@@ -1,0 +1,11 @@
+.detalles {
+  display: flex;
+  justify-content: flex-start;
+  margin: 3rem 0;
+  gap: 2rem;
+  .imagen {
+    img {
+      height: 30rem;
+    }
+  }
+}

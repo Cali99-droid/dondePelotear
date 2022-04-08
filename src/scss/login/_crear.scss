@@ -1,0 +1,34 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.enca {
+  text-align: center;
+  color: v.$blanco;
+}
+
+.contenedor-formulario {
+  width: 50%;
+  margin: 0 auto;
+  .for-crear {
+    .campo {
+      margin-top: 2rem;
+    }
+    label {
+      color: v.$negro;
+    }
+    .campo-check {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .boton {
+      margin-top: 1rem;
+      @include m.boton(v.$verde, v.$blanco);
+    }
+  }
+
+  .campo-route {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

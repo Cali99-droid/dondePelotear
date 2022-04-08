@@ -1,0 +1,17 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.mensaje {
+  margin-top: 5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: v.$verde;
+  h3 {
+    color: v.$blanco;
+  }
+}
+
+.cont-boton {
+  width: 8%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}

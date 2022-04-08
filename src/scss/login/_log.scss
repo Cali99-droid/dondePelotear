@@ -1,0 +1,75 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.dropup {
+  position: relative;
+  display: inline-block;
+
+  // &:hover .dropup-content {
+  //   display: block;
+  // }
+
+  .dropbtn {
+    cursor: pointer;
+  }
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #1e1f29;
+  max-width: 40rem;
+
+  z-index: 1;
+
+  a {
+    color: v.$verde;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+.formulario {
+  padding: 2rem;
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: v.$grisOscuro;
+    }
+
+    input {
+      height: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.route {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show {
+  display: block;
+}
+
+.listado {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-titulo {
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    @include m.tablet {
+      font-size: 5rem;
+    }
+    span {
+      color: v.$verde;
+    }
+  }
+}
