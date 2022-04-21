@@ -33,5 +33,7 @@ $router->get('/admin', [AdminController::class, 'index']);
 $router->get('/cancha-admin', [AdminController::class, 'cancha']);
 $router->get('/cuenta', [AdminController::class, 'cuenta']);
 $router->get('/perfil', [AdminController::class, 'perfil']);
+//API's ADMIN /api/setCancha
+$router->post('/api/set-cancha', [AdminController::class, 'setCancha']);
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();
