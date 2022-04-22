@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Classes\Email;
+use Model\Cancha;
 use Model\Usuario;
 use MVC\Router;
 
@@ -50,7 +51,8 @@ class LoginController
 
     public static function inicio(Router $router)
     {
-        $router->render('public/index');
+        $canchas = Cancha::all();
+        $router->render('public/index',['canchas' => $canchas]);
     }
     public static function cancha(Router $router)
     {

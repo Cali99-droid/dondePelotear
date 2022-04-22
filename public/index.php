@@ -5,7 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use Controllers\AdminController;
 use MVC\Router;
 use Controllers\LoginController;
-
+use Controllers\ApiController;
 $router = new Router();
 
 //iniciar session
@@ -29,11 +29,17 @@ $router->get('/confirmar-cuenta', [LoginController::class, 'confirmar']);
 $router->get('/mensaje', [LoginController::class, 'mensaje']);
 
 //Zona privada 
-$router->get('/admin', [AdminController::class, 'index']);
+$router->get('/admin', [AdminController::class, 'cancha']);
 $router->get('/cancha-admin', [AdminController::class, 'cancha']);
+$router->get('/reservaciones', [AdminController::class, 'reservaciones']);
 $router->get('/cuenta', [AdminController::class, 'cuenta']);
 $router->get('/perfil', [AdminController::class, 'perfil']);
 //API's ADMIN /api/setCancha
 $router->post('/api/set-cancha', [AdminController::class, 'setCancha']);
+
+
+
+//API'PUBLICA api/get-canchas
+$router->get('/api/get-canchas', [ApiController::class, 'getCanchas']);
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

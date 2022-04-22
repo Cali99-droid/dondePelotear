@@ -7,9 +7,9 @@
     </div>
     <nav class="sidebar-nav">
         <a class="<?php echo ($titulo === 'Mi Cancha') ? 'activo' : ''; ?>" href="/cancha-admin">Mi Cancha</a>
-        <a class="<?php echo ($titulo === 'Reservaciones') ? 'activo' : '';  ?>" href="/admin">Reservaciones</a>
+        <a class="<?php echo ($titulo === 'Reservaciones') ? 'activo' : '';  ?>" href="/reservaciones">Reservaciones</a>
         <a class="<?php echo ($titulo === 'Estado de Cuenta') ? 'activo' : '';  ?>" href="/cuenta">Estado de cuenta</a>
-        <a class="<?php echo ($titulo === 'Mi perfil') ? 'activo' : '';  ?>" href="/perfil">Perfil</a>
+        <a class="<?php echo ($titulo === 'Mi Perfil') ? 'activo' : '';  ?>" href="/perfil">Mi Perfil</a>
 
     </nav>
     <div class="cerrar-sesion-mobile">

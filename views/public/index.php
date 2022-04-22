@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 <!-- /HEADER -->
-
+<?php //debuguear($canchas); ?>
 
 
 <!-- SECTION -->
@@ -82,7 +82,6 @@
             <!-- contenido anuncios -->
             <div class="contenedor-anuncios col-md-12">
                 <div class="anuncio">
-                    <p>Grass</p>
                     <a href="/cancha">
                         <img class="img-anuncio" loading="lazy" src="build/img/grass1.jpg" alt="Anuncio">
                         <div class="contenido-anuncio">

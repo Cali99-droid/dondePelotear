@@ -76,7 +76,7 @@ async function validarCancha(){
   const direccion = document.querySelector('#direccion').value.trim();
   const desde = document.querySelector('#desde').value.trim();
   const hasta = document.querySelector('#hasta').value.trim();
-  const imagen = document.querySelector('#imagen').value.trim();
+  const imagen = document.querySelector('#imagen');
   const categoria = document.querySelector('#categoria').value.trim();
   const distrito = document.querySelector('#distrito').value.trim();
   if (nombre === "") {
@@ -164,7 +164,7 @@ async function validarCancha(){
   datos.append("direccion", direccion);
   datos.append("horario[desde]", desde);
   datos.append("horario[hasta]", hasta);
-  datos.append("imagen", imagen);
+  datos.append("imagen", imagen.files[0]);
   datos.append("distrito_id", distrito);
   datos.append("categoria_id", categoria);
 
