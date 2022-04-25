@@ -2,10 +2,8 @@
 
 namespace Controllers;
 
-use Classes\Email;
 use Model\Cancha;
-use Model\Usuario;
-use MVC\Router;
+
 
 class ApiController
 {

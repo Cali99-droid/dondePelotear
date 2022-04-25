@@ -8,23 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="build/css/bootstrap.min.css">
     <link rel="stylesheet" href="build/css/app.css">
-    <link rel="stylesheet" href="build/css/slick-theme.css">
-    <link rel="stylesheet" href="build/css/nouislider.min.css">
-    <link rel="stylesheet" href="build/css/font-awesome.min.css">
     <link rel="stylesheet" href="build/css/style.css">
-  
-   
-   
+
+    <script src="https://kit.fontawesome.com/1b230357bb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <?php echo $contenido; ?>
     <?php echo $script ?? ''; ?>
-
+    
 </body>
 
 </html>

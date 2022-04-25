@@ -80,44 +80,9 @@
             </div>
             <!-- /section title -->
             <!-- contenido anuncios -->
-            <div class="contenedor-anuncios col-md-12">
-                <div class="anuncio">
-                    <a href="/cancha">
-                        <img class="img-anuncio" loading="lazy" src="build/img/grass1.jpg" alt="Anuncio">
-                        <div class="contenido-anuncio">
-                            <h3>Grass La Bombonera</h3>
-                            <p>Grass de calidad y buena iluminacion</p>
-                            <p>Jr. Los claveles 234</p>
-                            <p class="precio">S/40</p>
-                            <a href="#" class="btn">Reservar Ahora</a>
-                        </div>
-                    </a>
-
-                </div>
-                <div class="anuncio">
-                    <a href="/cancha">
-                        <img class="img-anuncio" loading="lazy" src="build/img/grass2.jpeg" alt="Anuncio">
-                        <div class="contenido-anuncio">
-                            <h3>Grass El pelotero</h3>
-                            <p>Grass de calidad y buena iluminacion</p>
-                            <p>Jr. Los Angeles 834</p>
-                            <p class="precio">S/ 40</p>
-                            <a href="#" class="btn">Reservar Ahora</a>
-                        </div>
-                    </a>
-                </div>
-                <div class="anuncio">
-                    <a href="/cancha">
-                        <img class="img-anuncio" loading="lazy" src="build/img/grass3.jpg" alt="Anuncio">
-                        <div class="contenido-anuncio">
-                            <h3>Grass Sintetico Estrella</h3>
-                            <p>Grass de calidad y buena iluminacion</p>
-                            <p>Av. Las Flores 244</p>
-                            <p class="precio">S/40</p>
-                            <a href="#" class="btn">Reservar Ahora</a>
-                        </div>
-                    </a>
-                </div>
+            <div class="contenedor-anuncios col-md-12" id="contenedor-anuncios">
+                
+    
 
             </div>
             <!-- contenido anuncios -->

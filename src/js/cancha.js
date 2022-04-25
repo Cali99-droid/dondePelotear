@@ -1,3 +1,5 @@
+imagen();
+
 const nuevaTareaBtn = document.querySelector("#agregar-cancha");
 nuevaTareaBtn.addEventListener("click", function () {
   mostrarFormulario(false);
@@ -176,40 +178,66 @@ async function validarCancha(){
       body: datos,
     });
     const resultado = await respuesta.json();
-     console.log(resultado);
-     return;
+    console.log(resultado.id);
+   
     if (resultado.resultado) {
       Swal.fire({
         icon: "success",
-        title: "MUY BIEN !",
-        text: "Beneficio asignado correctamente!",
+        text: "Cancha Creada Correctamente!",
       });
+      const cerrar = document .querySelector(".cerrar-modal");
+      cerrar.click();
+     
       //** Puedo manejarlo en memoria o nuevamente consultar al servidor para obtener los datos actualizados */
-      const derObj = {
-        id: String(resultado.id),
-        nombreBen: der.nombreBen,
-        descripcion: descripcion.value,
-        estado: estado.value,
-        fecha_efectiva: resultado.fecha,
-      };
+      // const derObj = {
+      //   id: String(resultado.id),
+      //   nombreBen: der.nombreBen,
+      //   descripcion: descripcion.value,
+      //   estado: estado.value,
+      //   fecha_efectiva: resultado.fecha,
+      // };
 
       //** consultando al servidor para actualizar los datos */
-      obtenerDatos();
+     // obtenerDatos();
     } else {
       Swal.fire({
         icon: "error",
         title: "Error",
-        text: "El Beneficio ya fue asignado!",
+        text: "Hubo un error!",
       });
     }
   } catch (error) {
     Swal.fire({
       icon: "error",
       title: "Error...",
-      text: "Hubo un error al guardar la beneficio!",
+      text: "Hubo un error al guardar !",
     });
   }
 
     
 
+}
+
+
+function imagen(){
+    // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+  }
 }

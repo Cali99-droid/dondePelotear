@@ -6,7 +6,11 @@
 </div>
 
 <div class="barra">
-    <p>Hola: <span><?php //echo $_SESSION['nombre']; 
-                    ?></span></p>
+    <p>Hola: <span><?php 
+   // session_start();
+    echo $_SESSION['nombre']; 
+                    
+                    ?>
+                    </span></p>
     <a href="/logout" class="cerrar-session">Cerrar Session</a>
 </div>

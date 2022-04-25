@@ -29,7 +29,7 @@ class Imagen extends ActiveRecord
         }
         //asignar al atributo de imagen el nombre de la imagen
         if ($imagen) {
-            $this->ruta = $imagen;
+            $this->ruta = trim($imagen);
         }
     }
      //eliminar imagen

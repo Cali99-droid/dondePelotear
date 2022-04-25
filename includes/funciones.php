@@ -1,6 +1,7 @@
 <?php
 define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/imagenes/');
 define('CARPETA_DOCS', $_SERVER['DOCUMENT_ROOT'] . '/docs/');
+
 function debuguear($variable) : string {
     echo "<pre>";
     var_dump($variable);
@@ -16,7 +17,7 @@ function s($html) : string {
 
 // Función que revisa que el usuario este autenticado
 function isAuth() : void {
-    if(!isset($_SESSION['login'])) {
+    if(!$_SESSION['login']) {
         header('Location: /');
     }
 }
