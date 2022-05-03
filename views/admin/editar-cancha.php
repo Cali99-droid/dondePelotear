@@ -1,9 +1,13 @@
-<?php     //debuguear($cancha); ?>
-<div id="nueva-cancha" class="modal-lt animate ">
-    <form class="formulario nueva-tarea ">
-        <legend>Añade una nueva cancha
+<?php include_once __DIR__ . '/header-dashboard.php' ?>
+<div>
+    <a href="/admin">Mi cancha</a>
+    <a href="/editar-cancha">/ Editar Cancha</a>
+</div>
+
+<div class="modal-lt">
+<form class="formulario nueva-tarea ">
+        <legend>Editar cancha
         </legend>
-        <h3></h4>
         <div class="contenedor-form">
             <div class="columna">
                 <div class="campo">
@@ -76,3 +80,4 @@
 
     </form>
 </div>
+<?php include_once __DIR__ . '/footer-dashboard.php' ?>

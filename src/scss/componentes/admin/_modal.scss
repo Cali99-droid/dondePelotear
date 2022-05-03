@@ -2,27 +2,21 @@
 @use "base/mixins" as m;
 
 .modal-lt {
-  display: none;
-  position: absolute;
-  background-color: rgb(0 0 0 / 0.8);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
   .formulario {
-    max-width: 80rem;
+    max-width: 100rem;
     background-color: v.$blanco;
     padding: 2rem;
     margin: 0 auto;
-    transform: translateY(-30rem);
+   // transform: translateY(-30rem);
     transition-property: all;
     transition-timing-function: ease-in-out;
     transition-duration: 500ms;
-    opacity: 0;
+//opacity: 0;
     border-radius: 1rem;
 
     legend {

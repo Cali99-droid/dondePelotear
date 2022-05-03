@@ -2,6 +2,7 @@
   "name": "app-salon-php-mvc-sass-s",
   "version": "1.0.0",
   "main": "index.js",
+
   "scripts": {
     "start": "gulp"
   },
@@ -33,5 +34,14 @@
     "url": "https://github.com/Cali99-droid/dondePelotear/issues"
   },
   "homepage": "https://github.com/Cali99-droid/dondePelotear#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@fullcalendar/common": "^5.11.0",
+    "@fullcalendar/core": "^5.11.0",
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/list": "^5.11.0",
+    "@fullcalendar/timegrid": "^5.11.0"
+  }
+  
+
 }

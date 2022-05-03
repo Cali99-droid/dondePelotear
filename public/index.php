@@ -31,6 +31,8 @@ $router->get('/mensaje', [LoginController::class, 'mensaje']);
 //Zona privada 
 $router->get('/admin', [AdminController::class, 'cancha']);
 $router->get('/cancha-admin', [AdminController::class, 'cancha']);
+//editar cancha
+$router->get('/editar-cancha', [AdminController::class, 'editar']);
 $router->get('/reservaciones', [AdminController::class, 'reservaciones']);
 $router->get('/cuenta', [AdminController::class, 'cuenta']);
 $router->get('/perfil', [AdminController::class, 'perfil']);

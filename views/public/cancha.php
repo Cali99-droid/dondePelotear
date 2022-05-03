@@ -13,9 +13,7 @@
 
         </div>
     </div>
-
-
-
+    <div id='calendar' class="contenedor"></div>
 </div>
-
+<?php $script = "<script src='build/js/reservacion.js'></script>"; ?>
 <?php include 'footer.php' ?>
