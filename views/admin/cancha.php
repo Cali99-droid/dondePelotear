@@ -3,7 +3,7 @@
 <div class="contenedor">
     <?php if(is_null($cancha->id)){ ?>
         <div class="contenedor-nueva-tarea">
-            <button type="button" class="btn" id="agregar-cancha">&#43; Agregar Cancha</button>
+            <a href="/crear-cancha" class="btn" id="agregar-cancha">&#43; Agregar Cancha</a>
         </div>
     <?php } ?>  
 
@@ -18,12 +18,12 @@
             <p><i class="fa-solid fa-tag"></i> S/<?php echo $cancha->precio ?></p>
             <p><i class="fa-solid fa-location-dot"> </i> <?php echo $cancha->direccion . '-' . $cancha->distrito  ?></p>
             <p><i class="fa-solid fa-check"></i> <?php echo $cancha->categoria ?></p>
-            <div class="acciones">
-               <?php if(!is_null($cancha)){ ?>            
+            <!-- <div class="acciones">
+               <?php //if(!is_null($cancha)){ ?>            
                     <button type="button" class="btn" id="editar-cancha">Editar Cancha</button>            
-                <?php } ?>  
+                <?php // } ?>  
                 <button type="button" class="btn" id="eliminar-cancha"> Eliminar</button>
-            </div>  
+            </div>   -->
         </div> 
       
         <div class="contenido-imagen imagen-config cont-borde">
@@ -42,7 +42,7 @@
     
     </div>
 </div>
-<?php include_once __DIR__ . '/form-cancha.php' ?>
+
 <?php include_once __DIR__ . '/footer-dashboard.php' ?>
 
 <?php $script .=

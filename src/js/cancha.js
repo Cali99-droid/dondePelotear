@@ -1,45 +1,18 @@
-imagen();
+//
+const modal = document.getElementById("myModal");
+if (modal) {
+  imagen();
+}
 //accion agregar
-const nuevaTareaBtn = document.querySelector("#agregar-cancha");
+const nuevaTareaBtn = document.querySelector("#guardar-cancha");
 if (nuevaTareaBtn) {
   nuevaTareaBtn.addEventListener("click", function () {
-    mostrarFormulario(false);
+    // console.log("canchas");
+    validarCancha();
   });
 }
 
 //accion editar
-const editarCancha = document.querySelector("#editar-cancha");
-if (editarCancha) {
-  editarCancha.addEventListener("click", function () {
-    mostrarFormulario(true);
-  });
-}
-
-function mostrarFormulario(editar = false, tarea = {}) {
-  const modal = document.querySelector("#nueva-cancha");
-
-  setTimeout(() => {
-    const formulario = document.querySelector(".formulario");
-    formulario.classList.add("animar");
-  }, 0);
-  modal.style.display = "block";
-  const btnCerrarModal = document.querySelector(".cerrar-modal");
-
-  modal.addEventListener("click", function (e) {
-    if (e.target.classList.contains("cerrar-modal")) {
-      const formulario = document.querySelector(".formulario");
-      formulario.classList.add("cerrar");
-      setTimeout(() => {
-        formulario.classList.remove("cerrar");
-        modal.style.display = "none";
-      }, 500);
-    }
-    if (e.target.classList.contains("submit-nueva-cancha")) {
-      validarCancha();
-    }
-  });
-  document.querySelector(".dashboard").appendChild(modal);
-}
 
 function mostrarAlerta(mensaje, tipo, referencia) {
   //para que no se repitan las alertas
@@ -149,6 +122,8 @@ async function validarCancha() {
 
   //validando id
   const id_cancha = document.querySelector("#id_cancha").value;
+  const id_imagen = document.querySelector("#id_imagen").value;
+
   datos.append("id", id_cancha);
   datos.append("nombre", nombre);
   datos.append("descripcion", descripcion);
@@ -158,6 +133,7 @@ async function validarCancha() {
   datos.append("horario[desde]", desde);
   datos.append("horario[hasta]", hasta);
   datos.append("imagen", imagen.files[0]);
+  datos.append("imagen[id]", id_imagen);
   datos.append("distrito_id", distrito);
   datos.append("categoria_id", categoria);
 
@@ -170,14 +146,11 @@ async function validarCancha() {
     });
     const resultado = await respuesta.json();
     console.log(resultado);
-    return;
-    if (resultado.resultado) {
+    if (resultado.resultado || resultado) {
       Swal.fire({
         icon: "success",
         text: "Cancha Creada Correctamente!",
       });
-      const cerrar = document.querySelector(".cerrar-modal");
-      cerrar.click();
 
       //** Puedo manejarlo en memoria o nuevamente consultar al servidor para obtener los datos actualizados */
       // const derObj = {

@@ -65,6 +65,13 @@
                 </div>
                 <div class="campo">
                     <label>Imagen</label>
+                    <img id="myImg" src="/imagenes/<?php echo $imagen->ruta ?>" class="img-anuncio img-form" alt="">
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>    
+                    <input type="hidden" name="id_imagen" id="id_imagen" value="<?php echo $imagen->id ?? null  ?>" />
                     <input type='file' name='imagen' id="imagen" placeholder="Añade la dirección" />
                 </div>
                 <input type='hidden' name='id_cancha' id="id_cancha" value="<?php echo $cancha->id  ?>" />
@@ -81,3 +88,7 @@
     </form>
 </div>
 <?php include_once __DIR__ . '/footer-dashboard.php' ?>
+<?php $script .=
+    ' <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="build/js/cancha.js"></script> '
+?>

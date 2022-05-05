@@ -61,18 +61,16 @@
                 </div>
                 <div class="campo">
                     <label>Imagen</label>
+                    <input type="hidden" name="id_imagen" id="id_imagen" value="<?php echo $imagen->id ?? null  ?>" />
                     <input type='file' name='imagen' id="imagen" placeholder="Añade la dirección" />
                 </div>
-                <input type='hidden' name='id_cancha' id="id_cancha" value="<?php echo $cancha->id  ?>" />
+                <input type='hidden' name='id_cancha' id="id_cancha" value="<?php echo $cancha->id ?? null  ?>" />
                 <div class="opciones">
                     <button type="button" class="submit-nueva-cancha" id="guardar-cancha" >Guardar</button>
                     <button type="button" class='cerrar-modal'>Cancelar</button>
                 </div>
             </div>
         </div>
-
-
-
 
     </form>
 </div>

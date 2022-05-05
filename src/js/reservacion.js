@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   moment.locale("es");
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "timeGridWeek",
+    initialView: "dayGridMonth",
     locale: "esLocale",
     themeSystem: "bootstrap",
     height: 650,

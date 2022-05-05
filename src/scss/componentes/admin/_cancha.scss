@@ -1,6 +1,6 @@
 .contenido-cancha {
     display: flex;
-    justify-content: space-between;
+//justify-content: space-between;
     gap: 2rem;
 
    
@@ -20,15 +20,14 @@
         font-size: 1.5rem;
       }
 
-      h4{
-        font-size: 3rem;
+      h3{
+        font-size: 3.5rem;
       }
     }
 }
 
 .acciones{
     display: flex;
-    justify-content: space-between ;
 }
 
 
@@ -57,6 +56,10 @@
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
   
+  .img-form{
+    width: 10rem;
+    margin-bottom: 2rem;
+  }
   /* Modal Content (image) */
   .modal-content {
     margin: auto;

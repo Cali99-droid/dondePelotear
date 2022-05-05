@@ -32,6 +32,7 @@ $router->get('/mensaje', [LoginController::class, 'mensaje']);
 $router->get('/admin', [AdminController::class, 'cancha']);
 $router->get('/cancha-admin', [AdminController::class, 'cancha']);
 //editar cancha
+$router->get('/crear-cancha', [AdminController::class, 'crear']);
 $router->get('/editar-cancha', [AdminController::class, 'editar']);
 $router->get('/reservaciones', [AdminController::class, 'reservaciones']);
 $router->get('/cuenta', [AdminController::class, 'cuenta']);
